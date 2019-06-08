@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+tell application "System Events"
+    --set quit delay to 0
+    keystroke "h" using {command down, option down} --hide windows
+   -- keystroke "m" using {command down, option down}
+end tell

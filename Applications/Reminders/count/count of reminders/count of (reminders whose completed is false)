@@ -1,0 +1,5 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	count of (reminders whose completed is false)
+end tell

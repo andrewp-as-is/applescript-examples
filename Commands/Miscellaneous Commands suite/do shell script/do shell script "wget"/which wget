@@ -1,0 +1,5 @@
+#!/bin/sh
+
+which wget
+# /usr/local/bin/wget
+

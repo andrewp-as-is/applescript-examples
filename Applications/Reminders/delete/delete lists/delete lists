@@ -1,0 +1,6 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	delete lists --required app reload
+end tell
+

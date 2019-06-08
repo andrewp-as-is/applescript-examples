@@ -1,0 +1,30 @@
+#!/usr/bin/osascript
+
+
+on writefile(posixpath, content)
+    try
+        set the fp to open for access file POSIX file posixpath with write permission
+        set eof of the fp to 0
+        write (content) to fp starting at eof
+        close access fp
+        return true
+    on error
+        try
+            close access file posixpath
+        on error
+            return false
+        end try
+        return false
+    end try
+end writefile
+
+on tempfile()
+    set cmd to "mktemp -t ''"
+    set temp to do shell script cmd
+    return temp
+end tempfile
+
+set f to tempfile()
+writefile(f, "data")
+do shell script "cat " & f
+

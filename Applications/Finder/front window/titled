@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	titled of (front window)
+end tell

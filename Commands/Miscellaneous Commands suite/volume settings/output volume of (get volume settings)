@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+output volume of (get volume settings)
+
+

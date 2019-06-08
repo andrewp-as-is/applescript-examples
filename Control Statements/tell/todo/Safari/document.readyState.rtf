@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1251\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fnil\fcharset0 Monaco;\f1\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red35\green124\blue68;\red0\green22\blue176;\red142\green29\blue0;
+\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl300
+{\field{\*\fldinst{HYPERLINK "http://hints.macworld.com/article.php?story=20091101035318405"}}{\fldrslt 
+\f0\fs24 \cf2 http://hints.macworld.com/article.php?story=20091101035318405}}
+\f0\fs24 \cf2 \
+\
+\uc0\u1085 \u1091 \u1078 \u1085 \u1086  \u1074 \u1089 \u1090 \u1072 \u1074 \u1080 \u1090 \u1100  delay \u1095 \u1090 \u1086 \u1073 \u1099  \u1089 \u1088 \u1072 \u1073 \u1072 \u1090 \u1099 \u1074 \u1072 \u1083 \u1086 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\tx7280\tx7840\tx8400\tx8960\tx9520\tx10080\tx10640\tx11200\tx11760\tx12320\tx12880\tx13440\tx14000\tx14560\tx15120\tx15680\tx16240\tx16800\tx17360\tx17920\tx18480\tx19040\tx19600\tx20160\tx20720\tx21280\tx21840\tx22400\tx22960\tx23520\tx24080\tx24640\tx25200\tx25760\tx26320\tx26880\tx27440\tx28000\tx28560\tx29120\tx29680\tx30240\tx30800\tx31360\tx31920\tx32480\tx33040\tx33600\tx34160\tx34720\tx35280\tx35840\tx36400\tx36960\tx37520\tx38080\tx38640\tx39200\tx39760\tx40320\tx40880\tx41440\tx42000\tx42560\tx43120\tx43680\tx44240\tx44800\tx45360\tx45920\tx46480\tx47040\tx47600\tx48160\tx48720\tx49280\tx49840\tx50400\tx50960\tx51520\tx52080\tx52640\tx53200\tx53760\tx54320\tx54880\tx55440\tx56000\li832\fi-833\pardirnatural
+
+\f1\b \cf3 \CocoaLigature0 delay
+\b0 \cf0  0.2
+\f0 \cf2 \CocoaLigature1 \
+\pard\pardeftab720\sl300
+\cf2 \
+\pard\pardeftab720
+\cf4 \cb5 tell application "Safari" to open location "http://www.macosxhints.com/article.php?story=20091101035318405"\
+if page_loaded(20) then\
+	say "loaded"\
+else\
+	say "failed"\
+end if\
+\
+on page_loaded(timeout_value) -- in seconds\
+	delay 1\
+	repeat with i from 1 to timeout_value\
+		tell application "Safari"\
+			if name of current tab of window 1 is not "Loading" then exit repeat\
+		end tell\
+		delay 1\
+	end repeat\
+	if i is timeout_value then return false\
+	tell application "Safari"\
+		repeat until (do JavaScript "document.readyState" in document 1) is "complete"\
+			delay 0.5\
+		end repeat\
+	end tell\
+	return true\
+end page_loaded\
+}

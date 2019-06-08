@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	POSIX path of (selection as alias)
+end tell

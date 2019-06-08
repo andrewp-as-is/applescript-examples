@@ -1,0 +1,4 @@
+#!/usr/bin/osascript
+
+tell application "iTunes" to set sound volume to 0
+

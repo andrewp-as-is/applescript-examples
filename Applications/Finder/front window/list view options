@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	list view options of (front window)
+end tell

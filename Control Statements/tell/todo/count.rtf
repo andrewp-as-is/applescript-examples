@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa240
+
+\f0\fs26 \cf0 AppleScript isn\'92t the only one to define a 
+\f1 count 
+\f0 command: many scriptable applications also define 
+\f1 count 
+\f0 commands for counting their own application objects\'97documents, windows, tracks, folders, and so on.
+\f1\fs24 \
+
+\f0\fs26 The syntax is the same as AppleScript\'92s built-in 
+\f1 count 
+\f0 command:
+\f1\fs24 \
+\pard\pardeftab720\sa240
+
+\f0 \cf0 count 
+\f1 v : Return the number of elements of a particular class within an object. 
+\f0 count 
+\f1 specifier : the object for the command\
+[each type] : The class of objects to be counted. --> integer\
+\pard\pardeftab720\sa240
+
+\f0\fs26 \cf0 For example, you can count the number of pages in the front document in InDesign as follows:
+\f1\fs24 \
+tell application "Adobe InDesign CS4" 
+\f0 count 
+\f1 document 1 
+\f0 each 
+\f1 page\
+end tell\
+
+\f0\fs26 Personally I find the 
+\f1 each 
+\f0 parameter a bit awkward to read. Happily, the 
+\f1 count 
+\f0 command will normally accept a reference directly to the elements being counted as its direct parameter, allowing you to omit the 
+\f1 each 
+\f0 parameter altogether:
+\f1\fs24 \
+tell application "Adobe InDesign CS4" 
+\f0 count 
+\f1 pages of document 1\
+end tell\
+}

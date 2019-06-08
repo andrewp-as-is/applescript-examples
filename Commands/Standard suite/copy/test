@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+set l to {} -- empty list
+copy "item" to the end of the |l| --append to list
+

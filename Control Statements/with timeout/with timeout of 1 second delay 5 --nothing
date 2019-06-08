@@ -1,0 +1,10 @@
+#!/usr/bin/osascript
+
+log (do shell script "date")
+
+with timeout of 1 second
+    delay 5 --nothing
+end timeout
+
+log (do shell script "date")
+

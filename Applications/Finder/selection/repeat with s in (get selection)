@@ -1,0 +1,9 @@
+#!/usr/bin/osascript
+tell application "Finder"
+	--set l to {}
+	repeat with s in (get selection)
+		--set end of l to s as alias
+		do shell script "echo \"" & posix path of (s as alias) & "\""
+	end repeat
+	--return l
+end tell

@@ -1,0 +1,28 @@
+#!/usr/local/osascript
+
+on set_date_time(date_value, time_string)
+	set text item delimiters to ":"
+	set hours of date_value to (text item 1 of time_string) as integer
+	set minutes of date_value to (text item 2 of time_string) as integer
+	return date_value
+end set_date_time
+
+on set_time(summ, start_time, end_time) # set_time("Event","06:00","18:00")
+	tell application "iCal"
+		repeat with e in (every event of (every calendar) whose summary is summ)
+			set start_date to start date of e
+			set end_date to end date of e
+			if time string of start_date is not start_time or time string of end_date is not end_time then
+				set rec to recurrence of e
+				if rec is not missing value then
+					set recurrence of e to "missing value"
+				end if
+				set start date of e to my set_date_time(start_date, start_time)
+				set end date of e to my set_date_time(end_date, end_time)
+				if rec is not missing value then
+					set recurrence of e to rec
+				end if
+			end if
+		end repeat
+	end tell
+end set_time

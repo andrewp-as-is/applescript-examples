@@ -1,0 +1,5 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	activate
+end tell

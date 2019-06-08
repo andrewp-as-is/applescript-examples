@@ -1,0 +1,1 @@
+tell application "Google Chrome" to set active tab index of first window to 1

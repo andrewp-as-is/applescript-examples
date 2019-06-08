@@ -1,0 +1,1 @@
+Safari applescript not work in Yosemite :()

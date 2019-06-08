@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function label() {
+	osascript <<EOF
+tell application "Finder"
+	set fullpath to (POSIX path of "$1")
+	set _alias to (POSIX file fullpath as alias)
+	if label index of _alias is not $2 then
+		set the label index of _alias  to $2
+	end if
+end tell
+EOF
+}
+
+path="${BASH_SOURCE[0]//\"/\\\"}"
+label "$path" 6 # 6 - Green
+open -R "$0"

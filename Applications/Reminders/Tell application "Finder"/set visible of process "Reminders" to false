@@ -1,0 +1,5 @@
+#!/usr/bin/env osascript
+
+tell application "Finder"
+	set visible of process "Reminders" to false
+end tell 

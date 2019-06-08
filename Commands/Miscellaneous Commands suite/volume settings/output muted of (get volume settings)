@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+output muted of (get volume settings)
+--set volume output volume 50
+

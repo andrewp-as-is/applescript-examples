@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "VLC"
+	fullscreen mode
+end tell
+

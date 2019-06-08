@@ -1,0 +1,20 @@
+#!/usr/bin/osascript
+
+to joinList(a list, delimiter)
+	set retVal to ""
+	set prevDelimiter to AppleScript's text item delimiters
+	set AppleScript's text item delimiters to delimiter
+	set retVal to a list as string
+	set AppleScript's text item delimiters to prevDelimiter
+	return retVal
+end joinList
+
+
+tell application "Finder"
+	set l to {}
+	repeat with s in (get selection)
+		set end of l to POSIX path of (s as alias)
+	end repeat
+	return my joinList(l, "
+")
+end tell

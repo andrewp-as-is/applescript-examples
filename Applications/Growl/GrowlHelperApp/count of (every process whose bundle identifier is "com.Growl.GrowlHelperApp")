@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "System Events"
+	set isrunning to ¬
+		count of (every process whose bundle identifier is "com.Growl.GrowlHelperApp") > 0
+end tell

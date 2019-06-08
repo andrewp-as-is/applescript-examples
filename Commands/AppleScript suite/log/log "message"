@@ -1,0 +1,4 @@
+#!/usr/bin/osascript
+
+log "message"
+log "message2"

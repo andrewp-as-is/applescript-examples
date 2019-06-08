@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	open (POSIX FILE "/")
+	activate
+end tell

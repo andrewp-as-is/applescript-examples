@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Firefox"
+    name of first window
+end tell

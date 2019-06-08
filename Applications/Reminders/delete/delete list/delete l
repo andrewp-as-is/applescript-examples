@@ -1,0 +1,6 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	set l to make new list with properties {name:"Name"}
+	delete l
+end tell

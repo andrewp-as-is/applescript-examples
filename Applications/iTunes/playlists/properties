@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+tell application "iTunes"
+    repeat with _playlist in playlists
+    	get properties of _playlist
+    end repeat
+end tell

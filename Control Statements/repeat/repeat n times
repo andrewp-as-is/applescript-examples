@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+set n to 10
+repeat n times
+	log "message"
+end repeat
+

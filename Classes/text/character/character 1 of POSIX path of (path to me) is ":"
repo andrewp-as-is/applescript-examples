@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+character 1 of "/path/to/filename" is "/"
+--> true
+
+character 1 of POSIX path of (path to me) is "/"
+--> true

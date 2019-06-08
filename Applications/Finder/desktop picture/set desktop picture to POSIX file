@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	set desktop picture to POSIX file "/Users/russianidiot/Downloads/40b8ab2bc8903267e591fd9d7faba4dc (1).jpg"
+end tell

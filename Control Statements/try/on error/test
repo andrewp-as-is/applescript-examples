@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+try
+	log "try"
+on error
+	log "on error"
+end try

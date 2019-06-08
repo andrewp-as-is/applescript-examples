@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "System Events" to tell process "WindowServer"
+    key code {124, 124, 124} using control down
+end tell

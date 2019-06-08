@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	log target of (front window)
+	log POSIX PATH of (target of (front window) as text)
+end tell

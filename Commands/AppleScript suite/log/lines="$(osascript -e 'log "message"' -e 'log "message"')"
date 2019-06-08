@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+lines="$(osascript -e 'log "message"' -e 'log "message"')"
+echo $lines

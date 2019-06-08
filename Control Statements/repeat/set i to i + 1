@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+set i to 0
+repeat 100 times
+	set i to i + 1
+	log i
+end repeat

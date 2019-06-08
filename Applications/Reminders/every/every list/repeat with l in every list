@@ -1,0 +1,7 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	repeat with l in every list
+	 	get properties of l
+	end repeat
+end tell

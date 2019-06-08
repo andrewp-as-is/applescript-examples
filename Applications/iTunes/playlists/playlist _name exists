@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+tell application "iTunes"
+	if playlist "name" exists then
+		properties
+	end if
+end tell

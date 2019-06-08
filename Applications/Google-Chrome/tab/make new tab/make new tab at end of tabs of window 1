@@ -1,0 +1,7 @@
+#!/usr/bin.osascript
+
+tell application "Google Chrome"
+	set t to make new tab at end of tabs of window 1
+	delay 1
+	tell t to close
+end tell

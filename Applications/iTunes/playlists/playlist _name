@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+tell application "iTunes"
+	set _name to "name"
+	playlist _name
+end tell

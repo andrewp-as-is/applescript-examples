@@ -1,0 +1,8 @@
+#!/usr/bin/osascript
+
+tell application "Google Chrome"                   
+	repeat with w in  every window   
+		tell w to tab index
+	end repeat
+end tell
+

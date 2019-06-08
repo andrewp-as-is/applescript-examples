@@ -1,0 +1,5 @@
+#!/usr/bin.osascript
+
+tell application "Google Chrome"
+	tell front window to active tab index
+end tell

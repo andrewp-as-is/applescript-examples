@@ -1,0 +1,17 @@
+#!/usr/bin/osascript
+
+log (do shell script "date")
+
+try
+    tell application "Finder"
+        activate
+        with timeout of 1 second
+            display dialog "" giving up after 2
+        end timeout
+    end tell
+on error number -1712
+    activate
+end try
+
+log (do shell script "date")
+

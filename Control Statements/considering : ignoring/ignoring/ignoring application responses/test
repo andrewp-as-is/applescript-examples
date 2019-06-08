@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+   ignoring application responses
+       display dialog "foo" --script finished
+   end ignoring
+end tell

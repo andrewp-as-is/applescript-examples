@@ -1,0 +1,9 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	repeat with l in every list
+		--tell l
+			count of reminders of l
+		--end tell
+	end repeat 
+end tell

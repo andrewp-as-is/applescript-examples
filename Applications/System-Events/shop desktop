@@ -1,0 +1,12 @@
+#!/usr/bin/osascript
+
+
+tell application "Finder"
+    activate
+end tell
+tell application "System Events"
+    set quit delay to 0
+    keystroke "h" using {command down, option down}
+    keystroke "m" using {command down, option down}
+end tell
+

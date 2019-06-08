@@ -1,0 +1,6 @@
+#!/usr/bin/env osascript
+
+tell application "Reminders"
+	set _id to id of (make new list with properties {name:"test"})
+	delete list id _id 
+end tell

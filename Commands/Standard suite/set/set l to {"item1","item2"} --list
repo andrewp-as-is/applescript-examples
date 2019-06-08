@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+set l to {"item1","item2"} --list
+log l
+

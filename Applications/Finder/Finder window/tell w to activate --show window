@@ -1,0 +1,14 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	set wlist to every Finder window 
+	repeat with i from 1 to number of items in wlist
+		set w to item i of wlist
+		log (POSIX PATH of (target of w as text))
+		if (POSIX PATH of (target of w as text)) is "/" then
+			tell w to activate --show window
+			tell application "Finder" to activate
+			return
+		end if
+	end repeat
+end tell

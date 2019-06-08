@@ -1,0 +1,3 @@
+#!/usr/bin/osascript
+
+locked of (info for (path to me)) --locked

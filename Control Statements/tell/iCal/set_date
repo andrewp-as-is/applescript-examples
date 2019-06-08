@@ -1,0 +1,17 @@
+on set_date(summ, start_date, end_date)
+	tell application "iCal"
+		repeat with e in (every event of (every calendar) whose summary is summ)
+			if start_date is not start date of e or end_date is not end date of e then
+				set rec to recurrence of e
+				if rec is not missing value then
+					set recurrence of e to "missing value"
+				end if
+				set start date of e to start_date
+				set end date of e to end_date
+				if rec is not missing value then
+					set recurrence of e to rec
+				end if
+			end if
+		end repeat
+	end tell
+end set_date

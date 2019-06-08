@@ -1,0 +1,3 @@
+#!/usr/bin/osascript
+
+log do shell script "date"

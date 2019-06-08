@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "Finder"
+	POSIX path of (desktop picture as text)
+end tell

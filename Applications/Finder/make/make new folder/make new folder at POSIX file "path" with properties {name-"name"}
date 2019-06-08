@@ -1,0 +1,6 @@
+#!/usr/bin/osascript
+
+
+tell application "Finder"
+	make new folder  at POSIX file "path" with properties {name:"name"}
+end tell

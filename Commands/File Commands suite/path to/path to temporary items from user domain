@@ -1,0 +1,4 @@
+#!/usr/bin/osascript
+
+log path to temporary items from user domain
+log POSIX PATH of (path to temporary items from user domain)

@@ -1,0 +1,8 @@
+#!/usr/bin/osascript
+
+tell application "iTunes"
+	set _name to "alarm-clock"
+	if playlist _name exists then
+		play the playlist named _name
+	end if
+end tell
