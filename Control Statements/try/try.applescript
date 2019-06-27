@@ -1,4 +1,4 @@
-# http://developer.apple.com/library/mac/#documentation/applescript/conceptual/applescriptlangguide/reference/ASLR_control_statements.html
+-- http://developer.apple.com/library/mac/#documentation/applescript/conceptual/applescriptlangguide/reference/ASLR_control_statements.html
 
 
 try
@@ -11,4 +11,3 @@ on error errText number errNum
 		display dialog "Some other error: " & errNum & return & errText
 	end if
 end try
-w
