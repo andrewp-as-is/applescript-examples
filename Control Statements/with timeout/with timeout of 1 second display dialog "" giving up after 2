@@ -9,8 +9,11 @@ try
             display dialog "" giving up after 2
         end timeout
     end tell
-on error number -1712
-    activate
+on error errorMessage number errorNumber
+  --Connection is invalid. (-609)
+  --AppleEvent timed out. (-1712)
+  if (errorNumber is in {-609,-1712}) then return
+  error errorMessage number errorNumber
 end try
 
 log (do shell script "date")
